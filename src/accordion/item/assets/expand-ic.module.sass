@@ -1,0 +1,24 @@
+.expanded
+  animation: expand-from-centre 200ms ease-in-out forwards
+
+.collapsed
+  animation: collapse 200ms ease-in-out forwards
+
+@keyframes expand-from-centre
+  from
+    stroke-dasharray: 0, 9
+    stroke-dashoffset: -4
+
+  to
+    stroke-dasharray: 9, 9
+    stroke-dashoffset: 0
+
+@keyframes collapse
+  from
+    stroke-dasharray: 9, 9
+    stroke-dashoffset: 0
+
+  to
+    stroke-dasharray: 0, 9
+    stroke-dashoffset: -4
+

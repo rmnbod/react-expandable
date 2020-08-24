@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react"
 import styles from './item.module.sass'
-import icExpand from './assets/ic_expand.svg'
 import { TocItem } from "../model/toc-item";
 import { SubItem } from "../sub-item/sub-item";
+import { ExpandIcon } from "./assets/expand-ic";
 
 type Props = { tocItem: TocItem }
 
@@ -25,7 +25,7 @@ export function Item(props: Props) {
             <div className={ styles.item }>
                 <span>{ props.tocItem.name }</span>
                 { props.tocItem.subItems && <button onClick={ () => setExpanded(prevState => !prevState) }>
-                    <img src={ icExpand } alt=''/>
+                    <ExpandIcon isExpanded={isExpanded}/>
                 </button> }
             </div>
             { <div ref={ subItemsContainerRef } className={ styles.subItemsContainer }>
@@ -33,7 +33,7 @@ export function Item(props: Props) {
                     <SubItem
                         item={ subItem }
                         isVisible={ isExpanded }
-                        ordinalNumber={index}
+                        ordinalNumber={ index }
                     />
                 )) }
             </div> }
