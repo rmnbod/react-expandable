@@ -28,8 +28,14 @@ export function Item(props: Props) {
                     <img src={ icExpand } alt=''/>
                 </button> }
             </div>
-            { <div ref={ subItemsContainerRef } className={ styles.subItemContainer }>
-                { props.tocItem.subItems?.map(subItem => <SubItem item={ subItem }/>) }
+            { <div ref={ subItemsContainerRef } className={ styles.subItemsContainer }>
+                { props.tocItem.subItems?.map((subItem, index) => (
+                    <SubItem
+                        item={ subItem }
+                        isVisible={ isExpanded }
+                        ordinalNumber={index}
+                    />
+                )) }
             </div> }
         </div>
     )

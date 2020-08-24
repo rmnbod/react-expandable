@@ -1,3 +1,18 @@
 .container
-  //margin-left: 36px
   margin: 10px 0 10px 36px
+
+.open
+  animation: slideIn 300ms cubic-bezier(0.34, 0.01, 0.43, 0.87) forwards
+  opacity: 0
+
+//.closed
+//  animation: slideIn 500ms backwards
+
+@keyframes slideIn
+  from
+    transform: translateY(-1rem)
+    opacity: 0
+
+  to
+    transform: translateY(0)
+    opacity: 100
