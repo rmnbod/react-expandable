@@ -15,23 +15,23 @@ export const tocItems: TocItem[] = [
             },
             {
                 docLink: 'link',
-                name: 'Chapter1',
+                name: 'Chapter2',
             },
             {
                 docLink: 'link',
-                name: 'Chapter1',
+                name: 'Chapter3',
             },
             {
                 docLink: 'link',
-                name: 'Chapter1',
+                name: 'Chapter4',
             },
             {
                 docLink: 'link',
-                name: 'Chapter1',
+                name: 'Chapter5',
             },
             {
                 docLink: 'link',
-                name: 'Chapter1',
+                name: 'Chapter6',
             },
         ]
     },
@@ -53,11 +53,11 @@ export const tocItems: TocItem[] = [
             },
             {
                 docLink: 'link',
-                name: 'Chapter1',
+                name: 'Chapter2',
             },
             {
                 docLink: 'link',
-                name: 'Chapter1',
+                name: 'Chapter3',
             },
         ]
     },
