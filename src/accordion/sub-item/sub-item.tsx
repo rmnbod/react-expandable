@@ -6,7 +6,6 @@ type Props = { item: TocItem, isVisible: boolean, ordinalNumber: number }
 
 export function SubItem(props: Props) {
     const transitionDelay = props.ordinalNumber * 60 + 'ms'
-console.log('sd' + props.ordinalNumber)
     return (
         <div
             className={ `${ styles.container } ${ props.isVisible ? styles.open : '' }` }
